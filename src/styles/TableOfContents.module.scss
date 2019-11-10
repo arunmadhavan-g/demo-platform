@@ -1,5 +1,11 @@
-.title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.content {
+  margin-bottom: 2em;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .date {
+    color: #606060
+  }
 }

@@ -30,7 +30,7 @@ const TableOfContents = () => {
     .map(x => x.node)
     .map(x => {
       return (
-        <div>
+        <div className={styles.content}>
           <div className={styles.title}>
             <Link to={x.path}>
               <Header size={"large"}>{x.context.page.title}</Header>
