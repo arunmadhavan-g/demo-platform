@@ -1,3 +1,5 @@
-.mainContent{
-    width: 50rem;
+@import "variables.scss";
+
+.mainContent {
+  width: $content-width;
 }
