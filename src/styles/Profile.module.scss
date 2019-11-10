@@ -1,0 +1,13 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  width: 24em;
+  .social{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  img{
+    margin-bottom: 0 !important;
+  }
+}
