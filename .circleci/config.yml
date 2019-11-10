@@ -19,5 +19,9 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-      - run: git config --global user.name arunmadhavan-g
+      - run: git config --global user.name "arunmadhavan-g"
+      - run: git config --global user.email "arunmadhavan.g@gmail.com"
+      - add_ssh_key:
+          fingerprints:
+            - "SHA256:9ROYSYOGVjauIsaqfBIhfN2JcPBhGoYkSxQPRSheHLg arunmadhavang@Aruns-MacBook-Pro-2.local"
       - run: yarn deploy
