@@ -26,7 +26,7 @@ const TableOfContents = () => {
   `)
 
   return pages.allSitePage.edges
-    .filter(x => x.node.context.page)
+    .filter(x => x.node.context && x.node.context.page)
     .map(x => x.node)
     .map(x => {
       return (
