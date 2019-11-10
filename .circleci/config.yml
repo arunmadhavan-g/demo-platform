@@ -24,5 +24,5 @@ jobs:
       - run: git config --global user.password ${git_key}
       - add_ssh_keys:
           fingerprints:
-            - "SHA256:9ROYSYOGVjauIsaqfBIhfN2JcPBhGoYkSxQPRSheHLg arunmadhavang@Aruns-MacBook-Pro-2.local"
+            - "0Zoxlvpj4DHXl9o3heaMi1lmoPZdZLu5sVmNebGTMHA arunmadhavan.g@gmail.com"
       - run: yarn deploy
