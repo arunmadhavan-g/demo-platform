@@ -12,9 +12,9 @@ export default ({ pageContext: { page } }) => (
     <SiteHeader />
     <div className={styles.content}>
       <BlogHeader
-        author={page.author}
         publishedOn={page.publishedOn}
         title={page.title}
+        tags={page.tags}
       />
       <div id="preview" className={styles.content}>
         {

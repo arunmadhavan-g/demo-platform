@@ -1,0 +1,12 @@
+.tagContainer {
+  display: flex;
+  .tags {
+    margin: 8px;
+    padding: 5px 8px;
+    font-weight: bolder;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background: #D3D3D3;
+  }
+}

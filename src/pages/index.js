@@ -12,7 +12,7 @@ const IndexPage = () => (
       <Profile />
     </SiteHeader>
     <div className={styles.content}>
-    <TableOfContents />
+      <TableOfContents />
     </div>
   </div>
 )
