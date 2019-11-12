@@ -7,7 +7,10 @@ const getInfoJson = (user, repo) =>
 const getReadMeContent = (user, repo) =>
   get(`https://raw.githubusercontent.com/${user}/${repo}/master/README.md`)
 
-const pages = ["arunmadhavan-g/GatsbyTestTarget"]
+const pages = [
+  "arunmadhavan-g/GatsbyTestTarget",
+  "arunmadhavan-g/config-driven-ui",
+]
 
 exports.createPages = async ({ actions: { createPage } }) => {
   const pageDatas = await Promise.all(
@@ -15,7 +18,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
       const [user, repo] = page.split("/")
       const info = await getInfoJson(user, repo)
       const content = await getReadMeContent(user, repo)
-      return { ...info, content }
+      return { ...info, content, pagePath: page }
     })
   )
 

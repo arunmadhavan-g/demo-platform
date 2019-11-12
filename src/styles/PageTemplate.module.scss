@@ -2,4 +2,9 @@
 
 .container {
   width: $content-width;
+  .markDownContent{
+    img{
+      width: 100%;
+    }
+  }
 }

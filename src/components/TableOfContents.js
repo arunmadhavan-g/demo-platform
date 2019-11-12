@@ -40,6 +40,9 @@ const TableOfContents = () => {
           <div className={styles.date}>
             {formatDate(x.context.page.publishedOn)}
           </div>
+          <div className={styles.description}>
+            {x.context.page.description}
+          </div>
         </div>
       )
     })
