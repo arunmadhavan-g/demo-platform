@@ -1,13 +1,16 @@
-.container{
+.container {
   display: flex;
   justify-content: space-between;
   width: 20em;
-  .social{
+  .social {
     display: flex;
     justify-content: space-evenly;
   }
 
-  img{
+  img {
     margin-bottom: 0 !important;
+  }
+  a {
+    color: #000000;
   }
 }

@@ -7,15 +7,20 @@ import BlogHeader from "../components/BlogHeader"
 import SiteHeader from "../components/SiteHeader"
 import styles from "../styles/PageTemplate.module.scss"
 
+const updateSrc = (tagName, property, pagePath) => {
+  const elems = document.getElementById("preview").getElementsByTagName(tagName)
+
+  for (let i = 0; i < elems.length; i++) {
+    elems[i][property] = `https://github.com/${pagePath}/${elems[
+      i
+    ].getAttribute(property)}`
+  }
+}
+
 export default ({ pageContext: { page } }) => {
   useEffect(() => {
-    const imgs = document.getElementsByTagName("img")
-
-    for (let i = 0; i < imgs.length; i++) {
-      imgs[i].src = `https://github.com/${page.pagePath}/raw/master/${imgs[
-        i
-      ].getAttribute("src")}`
-    }
+    updateSrc("img", "src", `${page.pagePath}/raw/master`)
+    updateSrc("a", "href", `${page.pagePath}/blob/master`)
   })
 
   return (
@@ -26,6 +31,7 @@ export default ({ pageContext: { page } }) => {
           publishedOn={page.publishedOn}
           title={page.title}
           tags={page.tags}
+          repoLink={page.pagePath}
         />
         <div id="preview" className={styles.markDownContent}>
           {

@@ -1,7 +1,6 @@
 import React from "react"
 import { Header, Image } from "semantic-ui-react"
 import { Icon } from "semantic-ui-react"
-import { Link } from "gatsby"
 import styles from "../styles/Profile.module.scss"
 
 const socials = [
