@@ -17,6 +17,7 @@ const TableOfContents = () => {
                 publishedOn
                 title
                 tags
+                description
               }
             }
           }
@@ -39,9 +40,6 @@ const TableOfContents = () => {
           </div>
           <div className={styles.date}>
             {formatDate(x.context.page.publishedOn)}
-          </div>
-          <div className={styles.description}>
-            {x.context.page.description}
           </div>
         </div>
       )
