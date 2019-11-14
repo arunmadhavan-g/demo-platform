@@ -4,6 +4,7 @@ import SiteHeader from "../components/SiteHeader"
 import Profile from "../components/Profile"
 import TableOfContents from "../components/TableOfContents"
 import styles from "../styles/index.module.scss"
+import SiteFooter from "../components/SiteFooter"
 
 const IndexPage = () => (
   <div className={styles.mainContent}>
@@ -14,6 +15,7 @@ const IndexPage = () => (
     <div className={styles.content}>
       <TableOfContents />
     </div>
+    <SiteFooter />
   </div>
 )
 

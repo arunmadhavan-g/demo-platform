@@ -5,6 +5,7 @@ import remark2react from "remark-react"
 import "semantic-ui-css/semantic.min.css"
 import BlogHeader from "../components/BlogHeader"
 import SiteHeader from "../components/SiteHeader"
+import SiteFooter from "../components/SiteFooter"
 import styles from "../styles/PageTemplate.module.scss"
 
 const updateSrc = (tagName, property, pagePath) => {
@@ -42,6 +43,7 @@ export default ({ pageContext: { page } }) => {
           }
         </div>
       </div>
+      <SiteFooter />
     </div>
   )
 }

@@ -8,7 +8,7 @@ import { formatDate } from "../helpers/format"
 const TableOfContents = () => {
   const pages = useStaticQuery(graphql`
     {
-      allSitePage {
+      allSitePage(sort: { order: DESC, fields: context___page___publishedOn }) {
         edges {
           node {
             path
