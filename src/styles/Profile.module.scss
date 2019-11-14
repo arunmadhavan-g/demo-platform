@@ -11,6 +11,8 @@
 
   img {
     margin-bottom: 0 !important;
+    width: 80px !important;
+    height: 80px !important;
   }
   a {
     color: #000000;
@@ -22,6 +24,7 @@
     justify-content: space-around;
     img {
       width: 60px !important;
+      height: 60px !important;
     }
   }
 }
