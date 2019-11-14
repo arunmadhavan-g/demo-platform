@@ -1,3 +1,5 @@
+@import "mediaQuery";
+
 .tagContainer {
   display: flex;
   .tags {
@@ -9,5 +11,9 @@
     align-items: center;
     background: #d3d3d3;
     height: 2em;
+  }
+
+  @include mq(mobile) {
+    width: 100%;
   }
 }

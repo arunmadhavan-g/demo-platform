@@ -1,0 +1,15 @@
+$mobile-screen: 40em;
+$normal-screen: 60em;
+
+@mixin mq($mq) {
+  @if $mq == mobile {
+    @media (max-width: $mobile-screen) {
+      @content;
+    }
+  }
+  @if $mq == normal {
+    @media (min-width: $normal-screen) {
+      @content;
+    }
+  }
+}

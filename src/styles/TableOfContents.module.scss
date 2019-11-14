@@ -1,12 +1,25 @@
+@import "mediaQuery";
+
 .content {
   margin-bottom: 2em;
   .title {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include mq(mobile) {
+      flex-direction: column;
+      margin: 10px;
+      a {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
   }
   .date {
     color: #606060;
+    @include mq(mobile) {
+      margin: 10px;
+    }
   }
   .description {
     color: #474747;
