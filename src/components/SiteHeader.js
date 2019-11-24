@@ -8,7 +8,7 @@ const SiteHeader = ({ forContent = false, children }) => (
     className={`${styles.content} ${forContent ? `${styles.forContent}` : ""}`}
   >
     <Link to="/">
-      <Header as={forContent ? "h3" : "h1"}>Together With Tech</Header>
+      <Header as={forContent ? "h3" : "h1"}>Tech Musings</Header>
     </Link>
     <div>{children}</div>
   </div>
