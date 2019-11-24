@@ -8,13 +8,21 @@ import SiteHeader from "../components/SiteHeader"
 import SiteFooter from "../components/SiteFooter"
 import styles from "../styles/PageTemplate.module.scss"
 
+const checkForURL = val => {
+  const regex = new RegExp(
+    "^(http://www.|https://www.|http://|https://)?[a-z0-9]+([-.]{1}[a-z0-9]+)*.[a-z]{2,5}(:[0-9]{1,5})?(/.*)?$"
+  )
+  return regex.test(val)
+}
+
 const updateSrc = (tagName, property, pagePath) => {
   const elems = document.getElementById("preview").getElementsByTagName(tagName)
 
   for (let i = 0; i < elems.length; i++) {
-    elems[i][property] = `https://github.com/${pagePath}/${elems[
-      i
-    ].getAttribute(property)}`
+    const elementValue = elems[i].getAttribute(property)
+    if (!checkForURL(elementValue)) {
+      elems[i][property] = `https://github.com/${pagePath}/${elementValue}`
+    }
   }
 }
 
