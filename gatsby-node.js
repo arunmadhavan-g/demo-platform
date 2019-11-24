@@ -9,6 +9,7 @@ const getReadMeContent = (user, repo) =>
 
 const pages = [
   "arunmadhavan-g/config-driven-ui",
+  "arunmadhavan-g/multi-level-dnd"
 ]
 
 exports.createPages = async ({ actions: { createPage } }) => {
