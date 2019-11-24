@@ -8,7 +8,6 @@ const getReadMeContent = (user, repo) =>
   get(`https://raw.githubusercontent.com/${user}/${repo}/master/README.md`)
 
 const pages = [
-  "arunmadhavan-g/GatsbyTestTarget",
   "arunmadhavan-g/config-driven-ui",
 ]
 
