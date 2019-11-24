@@ -33,5 +33,5 @@ module.exports = {
     `gatsby-plugin-sass`,
   ],
 
-  pathPrefix: "/demo-platform",
+  pathPrefix: "/",
 }
