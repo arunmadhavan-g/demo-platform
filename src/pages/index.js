@@ -10,7 +10,7 @@ const IndexPage = () => (
   <div className={styles.mainContent}>
     <SEO title="Home" />
     <SiteHeader>
-      <Profile />
+      {(siteInfo) => <Profile {...siteInfo}/>}
     </SiteHeader>
     <div className={styles.content}>
       <TableOfContents />
