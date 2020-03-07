@@ -1,16 +1,12 @@
 const axios = require("axios")
 const _ = require("lodash")
+const { pages } = require("./config")
 
 const get = async endpoint => (await axios.get(endpoint)).data
 const getInfoJson = (user, repo) =>
   get(`https://raw.githubusercontent.com/${user}/${repo}/master/info.json`)
 const getReadMeContent = (user, repo) =>
   get(`https://raw.githubusercontent.com/${user}/${repo}/master/README.md`)
-
-const pages = [
-  "arunmadhavan-g/config-driven-ui",
-  "arunmadhavan-g/multi-level-dnd"
-]
 
 exports.createPages = async ({ actions: { createPage } }) => {
   const pageDatas = await Promise.all(

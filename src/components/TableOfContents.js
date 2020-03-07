@@ -1,34 +1,12 @@
 import React from "react"
-import { useStaticQuery, Link, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { Header } from "semantic-ui-react"
 import Tags from "./Tags"
 import styles from "../styles/TableOfContents.module.scss"
 import { formatDate } from "../helpers/format"
 
-const TableOfContents = () => {
-  const pages = useStaticQuery(graphql`
-    {
-      allSitePage(sort: { order: DESC, fields: context___page___publishedOn }) {
-        edges {
-          node {
-            path
-            context {
-              page {
-                publishedOn
-                title
-                tags
-                description
-              }
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  return pages.allSitePage.edges
-    .filter(x => x.node.context && x.node.context.page)
-    .map(x => x.node)
+const TableOfContents = ({ pages }) =>
+  pages
     .map(x => {
       return (
         <div className={styles.content}>
@@ -36,7 +14,7 @@ const TableOfContents = () => {
             <Link to={x.path}>
               <Header size={"large"}>{x.context.page.title}</Header>
             </Link>
-            <Tags items={x.context.page.tags} />
+            <Tags items={x.context.page.tags}/>
           </div>
           <div className={styles.date}>
             {formatDate(x.context.page.publishedOn)}
@@ -44,6 +22,5 @@ const TableOfContents = () => {
         </div>
       )
     })
-}
 
 export default TableOfContents
