@@ -29,7 +29,7 @@ const updateSrc = (tagName, property, pagePath) => {
 
 export default ({ pageContext: { page } }) =>
   <CommonParent>
-    {(siteInfo, pages) => {
+    {(siteInfo, _) => {
       useEffect(() => {
         updateSrc("img", "src", `${page.pagePath}/raw/master`)
         updateSrc("a", "href", `${page.pagePath}/blob/master`)

@@ -10,10 +10,10 @@ import PropTypes from "prop-types"
 import styles from "../styles/Layout.module.css"
 import SiteHeader from "./SiteHeader"
 
-const Layout = ({ children }) => {
+const Layout = ({ siteInfo, children }) => {
   return (
     <div className={styles.mainContent}>
-      <SiteHeader />
+      <SiteHeader siteInfo={siteInfo}/>
       <div
         style={{
           margin: `0 auto`,
