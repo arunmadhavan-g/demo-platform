@@ -1,0 +1,33 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    branches:
+      only:
+        - master
+      ignore:
+        - gh-pages
+    docker:
+      - image: circleci/node:12.12.0
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: yarn install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: git config --global user.name ${git_user}
+      - run: git config --global user.email ${git_email}
+      - run: git config --global user.password ${git_key}
+      - add_ssh_keys:
+          fingerprints:
+            - "0Zoxlvpj4DHXl9o3heaMi1lmoPZdZLu5sVmNebGTMHA arunmadhavan.g@gmail.com"
+      - run: yarn deploy
