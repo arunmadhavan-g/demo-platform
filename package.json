@@ -38,7 +38,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "yarn -cwd ./plugins/gatsby-multigitsource-plugin && gatsby build && cp CNAME public && gh-pages -d public -m [ci skip] -t"
+    "deploy": "yarn --cwd ./plugins/gatsby-multigitsource-plugin install && gatsby build && cp CNAME public && gh-pages -d public -m [ci skip] -t"
   },
   "repository": {
     "type": "git",
