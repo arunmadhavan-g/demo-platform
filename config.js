@@ -34,12 +34,12 @@ const siteMetadata = {
     { icon: "github", url: "https://github.com/arunmadhavan-g" },
   ],
   profileImageURL: "https://avatars1.githubusercontent.com/u/1178415?s=460&v=4",
-  pages,
 }
 
 
 module.exports = {
   siteMetadata,
+  pages,
   titleImage,
   pathPrefix,
 }

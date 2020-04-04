@@ -1,4 +1,4 @@
-const { pathPrefix, siteMetadata, titleImage} = require("./config")
+const { pages, pathPrefix, siteMetadata, titleImage} = require("./config")
 
 module.exports = {
   siteMetadata: siteMetadata,
@@ -26,6 +26,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-multigitsource-plugin`,
+      options: {
+        pages: pages
+      }
+    }
   ],
 
   pathPrefix: pathPrefix,
