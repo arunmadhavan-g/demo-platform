@@ -27,7 +27,7 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-multigitsource-plugin`,
+      resolve: `gatsby-source-multigitmarkdown`,
       options: {
         pages: pages
       }

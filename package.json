@@ -13,6 +13,7 @@
     "gatsby-plugin-sass": "^2.1.20",
     "gatsby-plugin-sharp": "^2.2.34",
     "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-source-multigitmarkdown": "^1.0.1",
     "gatsby-transformer-sharp": "^2.3.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
@@ -38,7 +39,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "deploy": "yarn --cwd ./plugins/gatsby-multigitsource-plugin install && gatsby build && cp CNAME public && gh-pages -d public -m 'ci skip' -t"
+    "deploy": "gatsby build && cp CNAME public && gh-pages -d public -m 'ci skip' -t"
   },
   "repository": {
     "type": "git",
