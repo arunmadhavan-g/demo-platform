@@ -5700,10 +5700,10 @@ gatsby-source-filesystem@^2.2.2:
     valid-url "^1.0.9"
     xstate "^4.8.0"
 
-gatsby-source-multigitmarkdown@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-source-multigitmarkdown/-/gatsby-source-multigitmarkdown-1.0.5.tgz#9051f8bca7da320cf6edb3ab8270adaf8da258d0"
-  integrity sha512-FXVO710dG9lSFHQFw4arGRF5II7rAjMQuRxS7K2coxpoLIarHX/t6A9mERoeMs0rlYauFHW9Fal5XPBhDx4EvQ==
+gatsby-source-multigitmarkdown@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/gatsby-source-multigitmarkdown/-/gatsby-source-multigitmarkdown-1.0.6.tgz#3facd7b74a10380f5ba59a07457eb0797588368f"
+  integrity sha512-geqfNFJYinOjyh+vxSEGbz8iUuLM886UlbXm6x3CH4wnZVnQRQqjBlEk99zPDPijPdDJQYkv8dxREapl2o4uLg==
   dependencies:
     axios "^0.19.2"
     remark-html "^11.0.1"
