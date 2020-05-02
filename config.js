@@ -21,7 +21,7 @@ const pages = [
     repo: "arunmadhavan-g/blogs",
     file: "TransientBPMN.md",
     title: "Implementing a transient BPM for a multi-tenant system",
-    publishedOn: "2020-04-19T12:39:18.088Z",
+    publishedOn: "2020-05-02T12:39:18.088Z",
     author: "Arun Madhavan",
     tags: ["Java", "Spring", "BPM"],
     description: "I share my experience with how I integrated a BPM system for a multi-tenant solution, and kept it transient to keep things simple",
