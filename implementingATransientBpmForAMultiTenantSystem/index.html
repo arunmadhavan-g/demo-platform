@@ -516,7 +516,7 @@ With this we were able to trigger a workflow everytime a request was created. </
 <p>Camunda does give us the ability to create different tenants which helps with isolation to a large extent, but it was still a concern with all the data sync up and logic duplication.</p>
 <h2>Deployment - Overflow</h2>
 <p>To add to the growing user, sync up issue, we found another one. The number of BPMN deployments grew, and it grew wild. </p>
-<p>Every tenant brought in their own BPMN files, each of which were creating their own deployment and every one of them started showing up in the camunda console. This looked pretty messed up especially and with more tenants expected to be onboard, we were definitely staring at a maintenance nightmare.</p>
+<p>Every tenant brought in their own BPMN files, each of which were creating their own deployment and every one of them started showing up in the camunda cockpit. This looked pretty messed up especially and with more tenants expected to be onboard, we were definitely staring at a maintenance nightmare.</p>
 <p>We had to rethink our implementation strategy. </p>
 <h1>Keeping it Simple</h1>
 <p>The first thing that we wanted to address was to reduce the moving parts. To achieve the same we decided to do the following</p>
@@ -545,7 +545,7 @@ With this we were able to trigger a workflow everytime a request was created. </
 <li>Once all the tasks are completed, we made camunda talk back to the application to mark the workflow as complete.</li>
 <li>This triggers another API call to undeploy the definition. </li>
 </ul>
-<p>This suddenly made all the persistent deployments to disappear from the camunda console. All that we were able to see are those which are in progress. </p>
+<p>This suddenly made all the persistent deployments to disappear from the camunda cockpit. All that we were able to see are those which are in progress. </p>
 <p>This kept things simple and massively reduced the headache of figuring out which deployment is for what.  </p>
 <p><img src="./images/transientBPMN/MultiDeploy.png" alt="Multi Deploy"></p>
 <h2>Transient and Statelesss</h2>
