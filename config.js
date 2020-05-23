@@ -26,15 +26,15 @@ const pages = [
     tags: ["Java", "Spring", "BPM"],
     description: "I share my experience with how I integrated a BPM system for a multi-tenant solution, and kept it transient to keep things simple",
   },
-  {
-    repo: "arunmadhavan-g/blogs",
-    file: "InceptionProcess.md",
-    title: "Running an Inception - My thoughts",
-    publishedOn: "2020-05-23T12:40:18.088Z",
-    author: "Arun Madhavan",
-    tags: ["Agile", "Process"],
-    description: "I've tried to put together a few of the techniques that we have used for running a project inception of an agile project.",
-  }
+  // {
+  //   repo: "arunmadhavan-g/blogs",
+  //   file: "InceptionProcess.md",
+  //   title: "Running an Inception - My thoughts",
+  //   publishedOn: "2020-05-23T12:40:18.088Z",
+  //   author: "Arun Madhavan",
+  //   tags: ["Agile", "Process"],
+  //   description: "I've tried to put together a few of the techniques that we have used for running a project inception of an agile project.",
+  // }
 ]
 
 const titleImage = "src/images/tech-musings.png"
