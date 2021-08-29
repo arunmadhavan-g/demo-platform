@@ -26,6 +26,15 @@ const pages = [
     tags: ["Java", "Spring", "BPM"],
     description: "I share my experience with how I integrated a BPM system for a multi-tenant solution, and kept it transient to keep things simple",
   },
+  {
+    repo: "arunmadhavan-g/blogs",
+    file: "MigratorPlatform-Part1.md",
+    title: "Building A Cloud Migration Platform - Part 1 : Provisioning the infrastructure",
+    publishedOn: "2020-08-29T22:09:18.088Z",
+    author: "Arun Madhavan",
+    tags: ["GCP", "Node", "Architecture"],
+    description: "Part 1 of a multi part blog, where I talk about how we built out a migration platform for moving from Azure to GCP",
+  }
   // {
   //   repo: "arunmadhavan-g/blogs",
   //   file: "InceptionProcess.md",
@@ -47,7 +56,6 @@ const siteMetadata = {
   author: `Arun Madhavan Govindarajan`,
   blogHeader: "A Blog from Arun Madhavan",
   socials: [
-    { icon: "twitter", url: "https://twitter.com/ArunmadhavanG" },
     { icon: "linkedin", url: "https://www.linkedin.com/in/arunmadhavang" },
     { icon: "github", url: "https://github.com/arunmadhavan-g" },
   ],
