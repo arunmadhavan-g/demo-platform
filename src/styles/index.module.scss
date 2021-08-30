@@ -2,7 +2,8 @@
 @import "mediaQuery";
 
 .mainContent {
-  width: $content-width;
+  //width: $content-width;
+  margin: 0 10em;
   display: flex;
   justify-content: center;
   flex-direction: column;
