@@ -30,7 +30,7 @@ const pages = [
     repo: "arunmadhavan-g/blogs",
     file: "MigratorPlatform-Part1.md",
     title: "Building A Cloud Migration Platform - Part 1 : Provisioning the infrastructure",
-    publishedOn: "2020-08-29T22:09:18.088Z",
+    publishedOn: "2021-08-29T22:09:18.088Z",
     author: "Arun Madhavan",
     tags: ["GCP", "Node", "Architecture"],
     description: "Part 1 of a multi part blog, where I talk about how we built out a migration platform for moving from Azure to GCP",
