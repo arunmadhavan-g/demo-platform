@@ -34,6 +34,15 @@ const pages = [
     author: "Arun Madhavan",
     tags: ["GCP", "Node", "Architecture"],
     description: "Part 1 of a multi part blog, where I talk about how we built out a migration platform for moving from Azure to GCP",
+  },
+  {
+    repo: "arunmadhavan-g/blogs",
+    file: "MigratorPlatform-Part2.md",
+    title: "Building A Cloud Migration Platform - Part 2 : Orchestration And Execution",
+    publishedOn: "2021-09-18T23:45:18.088Z",
+    author: "Arun Madhavan",
+    tags: ["GCP", "Spring Boot", "Migration", "Architecture"],
+    description: "Part 2 of a multi part blog, where I talk about how we built out a migration platform for moving from Azure to GCP",
   }
   // {
   //   repo: "arunmadhavan-g/blogs",
