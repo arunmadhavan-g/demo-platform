@@ -2,6 +2,7 @@
 
 .tagContainer {
   display: flex;
+  flex-wrap: wrap;
   .tags {
     margin: 0 8px 0 0;
     padding: 5px 8px;
@@ -16,7 +17,6 @@
 
   @include mq(mobile) {
     width: 100%;
-    max-width: 16em;
     overflow: auto;
   }
 }
