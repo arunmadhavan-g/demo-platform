@@ -16,5 +16,7 @@
 
   @include mq(mobile) {
     width: 100%;
+    max-width: 16em;
+    overflow: auto;
   }
 }
