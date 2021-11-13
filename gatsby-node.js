@@ -4,7 +4,7 @@ const frontmatterParser = require('@github-docs/frontmatter')
 const renderContent = require('@github-docs/render-content')
 
 const octokit = new Octokit({ 
-  auth: `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`,
+  auth: process.env.GIT_TOKEN,
 });
 
 const downloadContent = async path => {
@@ -38,7 +38,7 @@ exports.sourceNodes = async ({node, actions, createNodeId, createContentDigest},
               type: `repoRecords`,
           },
           pageInfo: {
-            ...x, 
+            ...(await x), 
             htmlContent: await renderContent(content, {}),
             frontmatter: data,
           },
@@ -52,7 +52,7 @@ exports.sourceNodes = async ({node, actions, createNodeId, createContentDigest},
 
 
 
-exports.createPages = async ({ graphql, actions: { createPage } }) =>{
+exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
   (await graphql(`
   query MyQuery {
