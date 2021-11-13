@@ -26,6 +26,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+      env: 
+        GIT_TOKEN: ${{ secrets.GITHUBTOKEN }}
     - run: npm install -g gatsby-cli
     - run: npm install
     - run: gatsby build
