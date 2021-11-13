@@ -67,6 +67,8 @@ const siteMetadata = {
   socials: [
     { icon: "linkedin", url: "https://www.linkedin.com/in/arunmadhavang" },
     { icon: "github", url: "https://github.com/arunmadhavan-g" },
+    { icon: "mail", url: "mailto:arunmadhavan.g@gmail.com"},
+    { icon: "mobile", url: "callto:+919840808667"},
   ],
   profileImageURL: "https://avatars1.githubusercontent.com/u/1178415?s=460&v=4",
 }

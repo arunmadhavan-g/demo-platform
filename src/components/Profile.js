@@ -3,11 +3,11 @@ import { Header, Image } from "semantic-ui-react"
 import { Icon } from "semantic-ui-react"
 import styles from "../styles/Profile.module.scss"
 
-const Profile = ({ blogHeader, profileImageURL, socials }) =>
+const Profile = ({ blogHeader, profileImageURL, socials, author, authorForHeader }) =>
   (
     <div className={styles.container}>
       <div>
-        <Header as="h4">{blogHeader}</Header>
+        <Header as={authorForHeader? "H2": "H4"}>{authorForHeader ? author: blogHeader}</Header>
         <div className={styles.social}>
           {socials.map(x => {
             return (

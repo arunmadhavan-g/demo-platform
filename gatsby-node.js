@@ -79,4 +79,30 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
     })
   });
 
+  const profileData = (await graphql(`
+  query MyQuery {
+    allRepoRecords {
+      edges {
+        node {
+          pageInfo {
+            htmlContent
+            frontmatter {
+              company
+              duration
+              projectName
+              role
+              tech
+              achievements
+            }
+          }
+        }
+      }
+    }
+  }`)).data.allRepoRecords.edges.map(x => x.node.pageInfo)
+
+  createPage({
+    path: `/About`,
+    component: require.resolve("./src/templates/profile-template.js"),
+    context: { profileData },
+  })
 }

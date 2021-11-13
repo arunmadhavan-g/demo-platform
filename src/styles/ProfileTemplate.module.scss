@@ -1,0 +1,84 @@
+@import "variables.scss";
+@import "mediaQuery";
+
+.container {
+  margin: 0 10rem;
+  @include mq(mobile) {
+    width: 100%;
+    margin: 0 0 5em 0;
+  }
+  margin-bottom: 5em;
+  font-size: 16px;
+
+  .projectDetails{
+    display: flex;
+    div{
+      margin: 10px 10px 10px 0;
+    }
+  }
+
+  .markDownContent {
+    @include mq(mobile) {
+      padding: 10px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    pre {
+      @include mq(mobile){
+        max-width: 22em;
+      }
+      background: #e9e9e9;
+      padding: 1em;
+      overflow-x: scroll;
+      code {
+        font-style: normal;
+      }
+    }
+
+    code {
+      font-style: italic;
+    }
+    table {
+      width: 100%;
+      background: #fff;
+      margin: 1em 0;
+      border: 1px solid rgba(34, 36, 38, 0.15);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-radius: 0.28571429rem;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.87);
+      border-collapse: separate;
+      border-spacing: 0;
+      thead {
+        box-shadow: none;
+        th {
+          cursor: auto;
+          background: #f9fafb;
+          text-align: inherit;
+          color: rgba(0, 0, 0, 0.87);
+          padding: 0.92857143em 0.78571429em;
+          vertical-align: inherit;
+          font-style: normal;
+          font-weight: 700;
+          text-transform: none;
+          border-bottom: 1px solid rgba(34, 36, 38, 0.1);
+        }
+      }
+      tr {
+        th {
+          border-left: 1px solid rgba(34, 36, 38, 0.1);
+        }
+      }
+
+      td,
+      th {
+        border: 1px solid lightgrey;
+        padding: 10px;
+      }
+    }
+  }
+}
